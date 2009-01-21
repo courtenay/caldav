@@ -7,6 +7,7 @@ require 'net/http'
 require 'net/https'
 require 'extensions/net/http'
 require 'extensions/icalendar/event'
+require 'hpricot'
 
 Dir[File.join(File.dirname(__FILE__), 'caldav/**/*.rb')].sort.each { |lib| require lib }
 
