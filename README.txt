@@ -1,26 +1,12 @@
 = CalDAV
 
-== To Do
+This is a hacked up version of the CalDAV library that is designed to work with my XServe's iCal server.
+It implements digest auth (instead of basic) and grabs individual .ics files because I couldn't find a way
+to see prop/caldav:calendar-data in the feed.
 
-* Generate VTIMEZONE
+Requirements:
 
-== Filtering
-
-CalendarQuery.new.event #=> All events
-CalendarQuery.new.event(time1..time2)
-CalendarQuery.new.event.uid("UID")
-CalendarQuery.new.todo.alarm(time1..time2)
-CalendarQuery.new.event.attendee(email).partstat('NEEDS-ACTION')
-CalendarQuery.new.todo.completed(false).status(:cancelled => false  )
-
-@mycal.find(query)
-
-== Results
-
-CalendarResult.new.limit_recurrence_set(range)
-CalendarResult.new.expand_recurrence(range)
-CalendarResult.new.freebusy(range)
-
-== Running Tests
-
-gem install mocha
+Gems:
+  icalendar
+  tzinfo
+  

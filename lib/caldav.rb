@@ -1,10 +1,10 @@
-
 require 'rubygems'
 require 'builder'
 require 'active_support'
 require 'icalendar'
 require 'tzinfo'
 require 'net/http'
+require 'net/https'
 require 'extensions/net/http'
 require 'extensions/icalendar/event'
 
